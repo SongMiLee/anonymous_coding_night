@@ -26,4 +26,4 @@ app.use(session({
 }));
 
 //add router
-var router = require('./router/main')(app);
+var main = require('./router/main')(app);
