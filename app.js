@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 //start the server
-var server = app.listen(3000, function(){
+var server = app.listen(port, function(){
     console.log("Express server has started on port : " + port);
 });
 

@@ -2,7 +2,7 @@
   "name": "anonymous",
   "version": "0.0.1",
   "main": "app.js",
-  "scripts" :{
+  "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
