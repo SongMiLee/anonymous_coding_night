@@ -1,7 +1,18 @@
 body{
+  @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+  font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
   height: 100%;
   /*background-color: 5F4B8B;*/
+}
+
+.navbar-brand{
+  padding: 0px;
+}
+.navbar-brand>img{
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 
 .content-box{
@@ -9,6 +20,21 @@ body{
   padding-right: 20%;
 }
 
+.feed-box{
+  border: solid 1px #D3D3D3;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 5px #D3D3D3;
+}
+.feed-content{
+  padding: 5px;
+  font-size: 13pt;
+}
+.feed-content .feed-date{
+  text-align: right;
+  font-size: 9pt;
+  color: gray;
+}
 #login-box{
   margin-top: 10%;
   height: 80%;
@@ -18,7 +44,7 @@ body{
 }
 
 #login-box-content{
-  color: 5F4B8B;
+  color: #5F4B8B;
   display: block;
   margin: 0 auto;
   text-align: center;
