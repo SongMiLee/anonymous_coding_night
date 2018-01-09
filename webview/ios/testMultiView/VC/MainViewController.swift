@@ -14,11 +14,20 @@ class MainViewController: UIViewController, WKNavigationDelegate{
     
     var webView: WKWebView!
     var indicator: UIActivityIndicatorView!
+    var refreshControl:UIRefreshControl!
+    
     override func loadView() {
         self.webView = WKWebView()
         self.webView.navigationDelegate = self
         self.webView.sizeToFit()
         self.view = webView
+        
+        //set scrolling refresh
+        self.webView.scrollView.isScrollEnabled = true
+        self.webView.scrollView.bounces = true
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(MainViewController.webViewReload), for: UIControlEvents.valueChanged)
+        webView.scrollView.addSubview(refreshControl)
         
     }
     override func viewDidLoad() {
@@ -54,5 +63,13 @@ class MainViewController: UIViewController, WKNavigationDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        self.webView.reload()
+    }
+    
+    @objc func webViewReload(_ sender: UIRefreshControl){
+        self.webView.reload()
+        refreshControl.endRefreshing()
+    }
     
 }
