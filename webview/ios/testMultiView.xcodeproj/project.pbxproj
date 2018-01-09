@@ -11,10 +11,6 @@
 		34AC9D7E1FFEF86C00AFE90B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D7C1FFEF86C00AFE90B /* Main.storyboard */; };
 		34AC9D801FFEF86C00AFE90B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D7F1FFEF86C00AFE90B /* Assets.xcassets */; };
 		34AC9D831FFEF86C00AFE90B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D811FFEF86C00AFE90B /* LaunchScreen.storyboard */; };
-		34AC9D931FFF032300AFE90B /* NotoSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D8F1FFF032300AFE90B /* NotoSerif-BoldItalic.ttf */; };
-		34AC9D941FFF032300AFE90B /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D901FFF032300AFE90B /* NotoSerif-Bold.ttf */; };
-		34AC9D951FFF032300AFE90B /* NotoSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D911FFF032300AFE90B /* NotoSerif-Italic.ttf */; };
-		34AC9D961FFF032300AFE90B /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34AC9D921FFF032300AFE90B /* NotoSerif-Regular.ttf */; };
 		34AC9D981FFF05AD00AFE90B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC9D971FFF05AD00AFE90B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,11 +21,11 @@
 		34AC9D7F1FFEF86C00AFE90B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34AC9D821FFEF86C00AFE90B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34AC9D841FFEF86C00AFE90B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34AC9D8F1FFF032300AFE90B /* NotoSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-BoldItalic.ttf"; path = "../../../../Downloads/fonts/Noto_Serif/NotoSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
-		34AC9D901FFF032300AFE90B /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Bold.ttf"; path = "../../../../Downloads/fonts/Noto_Serif/NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
-		34AC9D911FFF032300AFE90B /* NotoSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Italic.ttf"; path = "../../../../Downloads/fonts/Noto_Serif/NotoSerif-Italic.ttf"; sourceTree = "<group>"; };
-		34AC9D921FFF032300AFE90B /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Regular.ttf"; path = "../../../../Downloads/fonts/Noto_Serif/NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
 		34AC9D971FFF05AD00AFE90B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		34D08D2E2004406F00A7B417 /* NotoSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-BoldItalic.ttf"; path = "../../../../../../Downloads/fonts/Noto_Serif/NotoSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
+		34D08D2F2004407000A7B417 /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Bold.ttf"; path = "../../../../../../Downloads/fonts/Noto_Serif/NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
+		34D08D302004407000A7B417 /* NotoSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Italic.ttf"; path = "../../../../../../Downloads/fonts/Noto_Serif/NotoSerif-Italic.ttf"; sourceTree = "<group>"; };
+		34D08D312004407000A7B417 /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerif-Regular.ttf"; path = "../../../../../../Downloads/fonts/Noto_Serif/NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +88,10 @@
 		34AC9D8E1FFF02A000AFE90B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				34AC9D901FFF032300AFE90B /* NotoSerif-Bold.ttf */,
-				34AC9D8F1FFF032300AFE90B /* NotoSerif-BoldItalic.ttf */,
-				34AC9D911FFF032300AFE90B /* NotoSerif-Italic.ttf */,
-				34AC9D921FFF032300AFE90B /* NotoSerif-Regular.ttf */,
+				34D08D2F2004407000A7B417 /* NotoSerif-Bold.ttf */,
+				34D08D2E2004406F00A7B417 /* NotoSerif-BoldItalic.ttf */,
+				34D08D302004407000A7B417 /* NotoSerif-Italic.ttf */,
+				34D08D312004407000A7B417 /* NotoSerif-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -160,10 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34AC9D831FFEF86C00AFE90B /* LaunchScreen.storyboard in Resources */,
-				34AC9D931FFF032300AFE90B /* NotoSerif-BoldItalic.ttf in Resources */,
-				34AC9D951FFF032300AFE90B /* NotoSerif-Italic.ttf in Resources */,
-				34AC9D961FFF032300AFE90B /* NotoSerif-Regular.ttf in Resources */,
-				34AC9D941FFF032300AFE90B /* NotoSerif-Bold.ttf in Resources */,
 				34AC9D801FFEF86C00AFE90B /* Assets.xcassets in Resources */,
 				34AC9D7E1FFEF86C00AFE90B /* Main.storyboard in Resources */,
 			);
@@ -319,7 +311,7 @@
 				INFOPLIST_FILE = testMultiView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = song.simple.testMultiView;
+				PRODUCT_BUNDLE_IDENTIFIER = song.simple.anonynight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -335,7 +327,7 @@
 				INFOPLIST_FILE = testMultiView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = song.simple.testMultiView;
+				PRODUCT_BUNDLE_IDENTIFIER = song.simple.anonynight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
