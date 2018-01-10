@@ -1,12 +1,8 @@
-module.exports = function(app){
-  app.get('/', function(req, res){
-    res.render('index', {
-      title : "Express Home",
-      length : 5
-    });
-  });
-
-  app.get('/main', function(req,res){
+var setup = function(app, root){
+  app.get(root, function(req,res){
     res.render('main');
   });
-}
+};
+
+
+exports.setup = setup;

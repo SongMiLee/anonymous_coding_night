@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- style sheet -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/anonymous.css">
-</head>
+<% include ./partials/head %>
 <body>
-  <div class="row">
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  <% include ./partials/nav %>
 
   <div class="row">
     <div class="content-box">
-      <h2>feed chat section</h2>
-      <button type="button" class="btn btn-primary">primary</button>
+      <!-- feed writing box -->
+      <div class="row">
+        <form class="feed-writing-box">
+          <div>
+            <label for="feedText">Feed</label>
+            <textarea name="feedText" class="form-control" rows="4" placeholder="내용을 입력해 주세요."></textarea>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary theme-color" id="btn-submit-feed">submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="seperator"></div>
+
+      <!-- show feed -->
+      <div class="row">
+        <div class="feed-box">
+          <div class="feed-content">
+            <p>Test log</p>
+            <div class="feed-date"><p>2018-01-08</p></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Latest compiled JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+  <% include ./partials/script %>
 </body>
 </html>

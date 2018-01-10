@@ -1,23 +1,88 @@
 body{
+  @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+  font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
   height: 100%;
   /*background-color: 5F4B8B;*/
-  margin: 20px;
+}
+
+.theme-color{
+  background-color: #5F4B8B;
+  border: 1px solid #5F4B8B;
+}
+
+.navbar{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.navbar-brand{
+  padding: 0px;
+}
+.navbar-brand > img{
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 
 .content-box{
-  color: 5F4B8B;
-  margin-left: 20%;
-  margin-right: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.feed-writing-box{
+  padding: 20px;
+  border: solid 1px #D3D3D3;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 30px;
+  height: 50%;
+}
+
+.feed-box{
+  padding: 20px;
+  border: solid 1px #D3D3D3;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 5px #D3D3D3;
+}
+
+.feed-content{
+  width: 100%;
+  padding: 5px;
+  font-size: 13pt;
+}
+
+.feed-content .feed-date{
+  text-align: right;
+  font-size: 9pt;
+  color: gray;
+  margin-top: 5px;
+}
+
+.seperator{
+  width: 100%;
+  height: 5px;
+  margin-bottom: 20px;
+  background-color: #5F4B8B;
 }
 
 #login-box{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 50px;
+  margin-top: 10%;
   height: 80%;
   width: 100%;
   background-image: url("../img/back.jpg");
   background-size: cover;
+}
+
+#login-box-content{
+  color: #5F4B8B;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30%;
+}
+
+#btn-submit-feed{
+  margin-top: 10px;
+  width: 100%;
 }
