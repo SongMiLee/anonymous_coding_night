@@ -2,12 +2,17 @@
 <% include ./partials/head %>
 <body>
 
-  <div class="row">
+  <div class="row" ng-app="anony">
     <div class="content-box">
       <div id="login-box">
         <div id="login-box-content">
-          <h2>Login Section</h2>
-          <a href="/main"><button class="btn btn-primary" type="button">login</button></a>
+          <h2>Welcome Anony Night!</h2>
+
+            <a href="/main"><button class="btn btn-primary" type="button">login</button></a>
+            <fb:login-button
+              scope="public_profile,email"
+              onlogin="checkLoginState();">
+            </fb:login-button>
         </div>
       </div>
     </div>
