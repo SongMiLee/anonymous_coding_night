@@ -74,13 +74,18 @@ body{
   background-image: url("../img/back.jpg");
   background-size: cover;
 }
-
+#login-box-align{
+  padding-top: 15%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
 #login-box-content{
   color: #5F4B8B;
   display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 30%;
+  padding: 20px;
+  border: 1px solid #D3D3D3;
+  border-radius: 20px;
+  background-color: white;
 }
 
 #btn-submit-feed{

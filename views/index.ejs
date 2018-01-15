@@ -5,14 +5,29 @@
   <div class="row" ng-app="anony">
     <div class="content-box">
       <div id="login-box">
-        <div id="login-box-content">
-          <h2>Welcome Anony Night!</h2>
+        <div id="login-box-align">
+          <div id="login-box-content" ng-controller="loginControl" ng-cloak>
+            <table class="table">
+              <tr>
+                <td>Email</td>
+                <td>
+                  <md-tooltip md-direction="right">Input your email address</md-tooltip>
+                  <input type="email" placeholder="anony@example.com" ng-model="userData.user_email" style="width:100%;">
+                </td>
+              </tr>
+              <tr>
+                <td>Password</td>
+                <td>
+                  <md-tooltip md-direction="right">more than 8 characters</md-tooltip>
+                  <input type="password" pattern="^.{8,}$" placeholder="your password" ng-model="userData.user_pwd" style="width:100%;">
+                </td>
 
-            <a href="/main"><button class="btn btn-primary" type="button">login</button></a>
-            <fb:login-button
-              scope="public_profile,email"
-              onlogin="checkLoginState();">
-            </fb:login-button>
+              </tr>
+            </table>
+
+            <button type="button" class="btn btn-primary theme-color" style="width:100%; margin-bottom:20px;" ng-click="signIn()">Sign in</button>
+            <button type="button" class="btn btn-primary theme-color" style="width:100%; margin-bottom:20px;" ng-click="signUp()">Sgin up</button>
+          </div>
         </div>
       </div>
     </div>
