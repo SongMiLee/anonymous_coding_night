@@ -8,7 +8,7 @@ var setup = function(app, root){
   app.post(root + '/sendfeed', function(req, res){
     var dt = new Date();
     var feed = {
-      user_id : "1",
+      user_id : req.body.user_id,
       feed_text : req.body.feed_text,
       feed_date : dt.toFormat('YYYY-MM-DD HH24:MI:SS'),
     };

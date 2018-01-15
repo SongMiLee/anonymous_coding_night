@@ -5,9 +5,9 @@
   <% include ./partials/nav %>
 
   <div ng-app="anony" class="row">
-    <div class="content-box">
+    <div class="content-box" ng-controller="modiFeed">
       <!-- feed writing box -->
-      <div class="row" ng-controller="submitFeed">
+      <div class="row">
         <form class="feed-writing-box">
           <input type="hidden" name="id" ng-model="feedData.user_id">
           <div>
@@ -23,7 +23,7 @@
       <div class="seperator"></div>
 
       <!-- show feed -->
-      <div class="row" ng-controller="getFeed">
+      <div class="row">
         <div class="feed-box" ng-repeat= "x in feedBox">
           <div class="feed-content">
             <p>{{ x.feed_text }}</p>

@@ -1,7 +1,37 @@
 var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption']);
 
-app.controller('submitFeed', function($scope, $window, $http){
+app.config(function($locationProvider){
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
+});
+
+app.controller('modiFeed', function($scope, $window, $http, $location){
   $scope.feedData = {};
+  var id = $location.search();
+
+  //redirect when id is not came
+  if(angular.isUndefined(id) || id == null || id.length == 0 || angular.equals({}, id)){
+    $window.location.href='/';
+  }else{
+    $scope.feedData.user_id = id;
+
+    $http({
+      method: "POST",
+      url: "/api/loadfeed"
+    }).then(function Success(res){
+      if(res.data.ret == 0){
+        var total = res.data.feeds;
+        $scope.feedBox = total;
+      }else{
+        console.log(res.data.error);
+        alert.log("load fail");
+      }
+    }), function Fail(res){
+      alert("load Fail");
+    };
+  }
 
   $scope.sendFeed = function(){
     if($scope.feedData.feed_text == null){
@@ -19,7 +49,6 @@ app.controller('submitFeed', function($scope, $window, $http){
           alert("Send Fail");
           console.log(res.data.error);
         }else{
-          alert("Send Success");
           $window.location.reload();
         }
 
@@ -32,22 +61,7 @@ app.controller('submitFeed', function($scope, $window, $http){
   }
 });
 
-app.controller('getFeed', function($scope, $http){
-  $http({
-    method: "POST",
-    url: "/api/loadfeed"
-  }).then(function Success(res){
-    if(res.data.ret == 0){
-      var total = res.data.feeds;
-      $scope.feedBox = total;
-    }else{
-      console.log(res.data.error);
-      alert.log("load fail");
-    }
-  }), function Fail(res){
-    alert("load Fail");
-  };
-});
+
 
 app.controller('loginControl', function($scope, $http, $window,sha256){
   $scope.userData = {};
