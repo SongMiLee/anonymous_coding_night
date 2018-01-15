@@ -42,6 +42,11 @@ var setup = function(app, root){
       }
     });
   });
+
+  app.post('logout', function(req, res){
+    req.session.destroy();
+    res.send({ret:0});
+  });
 };
 
 exports.setup = setup;

@@ -42,6 +42,16 @@ app.use(session({
   saveUninitialized : true
 }));
 
+//Authentication
+
+var auth = function(req, res, next){
+  if(req.session && req.session.user_id != null && req.session.user_email != null){
+    return next();
+  }else{
+    return res.redirect('/');
+  }
+}
+
 //add router
 require('./router/index').setup(app, '/');
 require('./router/main').setup(app, '/main');
