@@ -19,7 +19,8 @@ var setup = function(app, root){
       if(result.length == 0){
         global.db.collection("users").insertOne(user, function(err, result){
           if(err) res.send({ret: 1, data:err});
-          res.send({ret:0, data:user.user_id});
+          global.auth(req, res, user.user_id);
+          res.send({ret:0, data: "");
         });
       }else{
         res.send({ret:1, data:"This email is used."});
@@ -38,13 +39,15 @@ var setup = function(app, root){
       if(result.length == 0){
         res.send({ret:1, data:"You're not our Member! Please Sign Up!"});
       }else{
-        res.send({ret:0, data:result[0].user_id});
+        global.auth(req, res, result[0].user_id);
+        res.send({ret:0, data: "");
       }
     });
   });
 
   app.post('logout', function(req, res){
     req.session.destroy();
+    req.clearCookie('anony');
     res.send({ret:0});
   });
 };

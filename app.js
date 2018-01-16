@@ -37,22 +37,22 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(session({
+  key    : 'anony',
   secret : '@@1234@@',
   resave : false,
-  saveUninitialized : true
+  saveUninitialized : true,
+  cookie:{
+    maxAge: 1000 * 60 * 60
+  }
 }));
 
 //Authentication
-
-var auth = function(req, res, next){
-  if(req.session && req.session.user_id != null && req.session.user_email != null){
-    return next();
-  }else{
-    return res.redirect('/');
-  }
-}
+global.auth = function(req, res, user_id){
+  req.session.user_id = user_id;
+};
 
 //add router
 require('./router/index').setup(app, '/');
 require('./router/main').setup(app, '/main');
 require('./router/api').setup(app, '/api');
+require('./router/mypage').setup(app, '/mypage');

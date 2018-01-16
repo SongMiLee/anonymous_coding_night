@@ -1,4 +1,4 @@
-var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption']);
+var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption', 'commonService']);
 
 app.config(function($locationProvider){
   $locationProvider.html5Mode({
@@ -7,15 +7,8 @@ app.config(function($locationProvider){
   });
 });
 
-app.controller('modiFeed', function($scope, $window, $http, $location){
+app.controller('modiFeed', function($scope, $window, $http, $location, commonService){
   $scope.feedData = {};
-  var id = $location.search();
-
-  //redirect when id is not came
-  if(angular.isUndefined(id) || id == null || id.length == 0 || angular.equals({}, id)){
-    $window.location.href='/';
-  }else{
-    $scope.feedData.user_id = id;
 
     $http({
       method: "POST",
@@ -31,7 +24,6 @@ app.controller('modiFeed', function($scope, $window, $http, $location){
     }), function Fail(res){
       alert("load Fail");
     };
-  }
 
   $scope.sendFeed = function(){
     if($scope.feedData.feed_text == null){
@@ -61,31 +53,33 @@ app.controller('modiFeed', function($scope, $window, $http, $location){
   }
 });
 
-
-
 app.controller('loginControl', function($scope, $http, $window,sha256){
-  $scope.userData = {};
 
   $scope.signIn = function(){
-      if($scope.userData.user_email == null || $scope.userData.user_pwd == null){
+      if($scope.user_email == null || $scope.user_pwd == null){
         alert("입력 값을 다시 확인해 주십시오");
       }else{
-        $scope.userData.user_pwd = sha256.convertToSHA256($scope.userData.user_pwd);
+        var pwd = sha256.convertToSHA256($scope.user_pwd);
+
+        var userData = {
+          user_email : $scope.user_email,
+          user_pwd   : pwd,
+        };
         //로그인
         $http({
           method:"POST",
           url: "/signin",
-          data: $scope.userData
+          data: userData
         }).then(function Success(res){
           var result = res.data;
           if(result.ret == 1){
-            $scope.userData.user_email = "";
-            $scope.userData.user_pwd = "";
+            $scope.user_email = "";
+            $scope.user_pwd = "";
             alert(result.data);
           }else{
-            $scope.userData.user_email = "";
-            $scope.userData.user_pwd = "";
-            $window.location.href = '/main?id='+result.data;
+            $scope.user_email = "";
+            $scope.user_pwd = "";
+            $window.location.href = '/main';
           }
         }), function Fail(res){
           alert("Internal Error!");
@@ -94,26 +88,31 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
   };
 
   $scope.signUp = function(){
-    if($scope.userData.user_email == null || $scope.userData.user_pwd == null){
+    if($scope.user_email == null || $scope.user_pwd == null){
       alert("입력 값을 다시 확인해 주십시오");
     }else{
-      $scope.userData.user_pwd = sha256.convertToSHA256($scope.userData.user_pwd);
+      var pwd = sha256.convertToSHA256($scope.user_pwd);
+
+      var userData = {
+        user_email : $scope.user_email,
+        user_pwd   : pwd,
+      };
 
       //가입
       $http({
         method:"POST",
         url: "/signup",
-        data: $scope.userData
+        data: userData
       }).then(function Success(res){
         var result = res.data;
         if(result.ret == 1){
-          $scope.userData.user_email = "";
-          $scope.userData.user_pwd = "";
+          $scope.user_email = "";
+          $scope.user_pwd = "";
           alert(result.data);
         }else{
-          $scope.userData.user_email = "";
-          $scope.userData.user_pwd = "";
-          $window.location.href = '/main?id='+result.data;
+          $scope.user_email = "";
+          $scope.user_pwd = "";
+          $window.location.href = '/main';
         }
       }), function Fail(res){
         alert("Internal Error!");
