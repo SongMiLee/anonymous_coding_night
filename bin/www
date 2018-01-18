@@ -1,0 +1,11 @@
+var app = require('../app.js');
+var http = require('http');
+var https = require('https');
+
+//port
+const port = process.env.PORT || 8080;
+
+var server = http.createServer(app);
+server.listen(port, function(){
+  console.log("server is running at port " + port);
+});

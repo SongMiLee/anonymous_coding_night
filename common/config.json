@@ -6,6 +6,7 @@
       "password":"lsm9548!",
       "port":"27017",
       "dbName" : "anony"
-    }
+    },
+    "secretKey" : "adobe!24098371@azowmzock"
   }
 }
