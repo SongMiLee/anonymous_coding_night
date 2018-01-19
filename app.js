@@ -34,8 +34,21 @@ db.connection.then(function(res){
   console.log("db connected");
 });
 
+app.use( function(req,res,next) {
+    return next();
+});
+
+app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
+  if(req.session.user_id){
+    next();
+  } else{
+    req.url = '/main';
+    next();
+  }
+});
+
 //add router
-require('./router/index').setup(app, '/');
+require('./router/index').setup(app, '/main');
 require('./router/api').setup(app, '/api');
 require('./router/mypage').setup(app, '/mypage');
 

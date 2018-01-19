@@ -1,39 +1,40 @@
-<!DOCTYPE html>
 <html>
 <% include ./partials/head %>
-<body ng-app="anony">
-  <% include ./partials/nav %>
+<body>
 
-  <div class="row">
-    <div class="content-box" ng-controller="modiFeed">
-      <!-- feed writing box -->
-      <div class="row">
-        <form class="feed-writing-box">
-          <input type="hidden" name="id" ng-model="feedData.user_id">
-          <div>
-            <label for="feedText">Feed</label>
-            <textarea ng-model="feedData.feed_text" name="feedText" class="form-control" rows="4" placeholder="내용을 입력해 주세요."></textarea>
-          </div>
-          <div>
-            <button type="button" class="btn btn-primary theme-color" id="btn-submit-feed" ng-click="sendFeed()">submit</button>
-          </div>
-        </form>
-      </div>
+  <div class="row" ng-app="anony">
+    <div class="content-box">
+      <div id="login-box">
+        <div id="login-box-align">
+          <div id="login-box-content" ng-controller="loginControl" ng-cloak>
+            <table class="table">
+              <tr>
+                <td>Email</td>
+                <td>
+                  <md-tooltip md-direction="right">Input your email address</md-tooltip>
+                  <input type="email" placeholder="anony@example.com" ng-model="user_email" style="width:100%;">
+                </td>
+              </tr>
+              <tr>
+                <td>Password</td>
+                <td>
+                  <md-tooltip md-direction="right">Input your password</md-tooltip>
+                  <input type="password" pattern="^.{8,}$" placeholder="more than 8 characters" ng-model="user_pwd" style="width:100%;">
+                </td>
 
-      <div class="seperator"></div>
+              </tr>
+            </table>
 
-      <!-- show feed -->
-      <div class="row">
-        <div class="feed-box" ng-repeat= "x in feedBox">
-          <div class="feed-content">
-            <p>{{ x.feed_text }}</p>
-            <div class="feed-date"><p>{{ x.feed_date }}</p></div>
+            <button type="button" class="btn btn-primary theme-color" style="width:100%; margin-bottom:20px;" ng-click="signIn()">Sign in</button>
+            <button type="button" class="btn btn-primary theme-color" style="width:100%; margin-bottom:20px;" ng-click="signUp()">Sgin up</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <% include ./partials/script %>
+
+  <% include ./partials/script.ejs %>
+
 </body>
 </html>

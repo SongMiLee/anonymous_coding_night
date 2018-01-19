@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<% include ./partials/head %>
+<body ng-app="anony">
+  <% include ./partials/nav %>
+
+  <div class="row">
+    <div class="content-box" ng-controller="modiFeed">
+      <!-- feed writing box -->
+      <div class="row">
+        <form class="feed-writing-box">
+          <input type="hidden" name="id" ng-model="feedData.user_id">
+          <div>
+            <label for="feedText">Feed</label>
+            <textarea ng-model="feedData.feed_text" name="feedText" class="form-control" rows="4" placeholder="내용을 입력해 주세요."></textarea>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary theme-color" id="btn-submit-feed" ng-click="sendFeed()">submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="seperator"></div>
+
+      <!-- show feed -->
+      <div class="row">
+        <div class="feed-box" ng-repeat= "x in feedBox">
+          <div class="feed-content">
+            <p>{{ x.feed_text }}</p>
+            <div class="feed-date"><p>{{ x.feed_date }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% include ./partials/script %>
+</body>
+</html>

@@ -86,7 +86,7 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
           }else{
             $scope.user_email = "";
             $scope.user_pwd = "";
-            $window.location.href = '/main';
+            $window.location.href = '/main/feed';
           }
         }), function Fail(res){
           alert("Internal Error!");
@@ -119,7 +119,7 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
         }else{
           $scope.user_email = "";
           $scope.user_pwd = "";
-          $window.location.href = '/main';
+          $window.location.href = '/main/feed';
         }
       }), function Fail(res){
         alert("Internal Error!");
