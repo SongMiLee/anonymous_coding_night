@@ -1,52 +1,21 @@
-require('date-utils');
+'use strict';
 
 var setup = function(app, root){
   app.get('/', function(req, res){
-    res.render('index');
+    if(req.session.user_id != null){
+      res.redirect('main');
+    }else{
+      res.render('index');
+    }
   });
 
-  app.post('/signup', function(req, res){
-    var dt = new Date();
-    var user = {
-      user_id : Math.floor(dt),
-      user_email : req.body.user_email,
-      user_pwd   : req.body.user_pwd,
-      join_date  : dt.toFormat('YYYY-MM-DD HH24:MI:SS'),
-    };
+  app.get('/main', function(req, res){
+    res.render('main', { user_id : req.session.user_id});
+  })
 
-    global.db.collection("users").find({user_email : user.user_email}).toArray(function(err, result){
-      if(result.length == 0){
-        global.db.collection("users").insertOne(user, function(err, result){
-          if(err) res.send({ret: 1, data:err});
-          res.send({ret:0, data: ""});
-        });
-      }else{
-        res.send({ret:1, data:"This email is used."});
-      }
-    });
-  });
-
-  app.post('/signin', function(req, res){
-    var user = {
-      user_email : req.body.user_email,
-      user_pwd   : req.body.user_pwd,
-    };
-
-    global.db.collection("users").find(user).toArray(function(err, result){
-      if(err) res.send({ret: 1, data:err});
-      if(result.length == 0){
-        res.send({ret:1, data:"You're not our Member! Please Sign Up!"});
-      }else{
-        req.session.member.user_id = result[0].user_id;
-        res.send({ret:0, data: ""});
-      }
-    });
-  });
-
-  app.post('logout', function(req, res){
-    req.session.destroy();
-    res.send({ret:0});
-  });
+  app.get('/mypage', function(req, res){
+    res.render('mypage', { user_id : req.session.user_id});
+  })
 };
 
 exports.setup = setup;

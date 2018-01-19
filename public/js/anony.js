@@ -1,10 +1,17 @@
 var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption', 'commonService']);
+var global_user_id = '';
 
-app.config(function($locationProvider){
+app.config(function($locationProvider, $routeProvider){
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: false
   });
+});
+
+app.controller('navController', function($scope, $window){
+  $scope.pageMove = function(path){
+    $window.location.href = path;
+  }
 });
 
 app.controller('modiFeed', function($scope, $window, $http, $location, commonService){
@@ -68,7 +75,7 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
         //로그인
         $http({
           method:"POST",
-          url: "/signin",
+          url: "/api/signin",
           data: userData
         }).then(function Success(res){
           var result = res.data;
@@ -101,7 +108,7 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
       //가입
       $http({
         method:"POST",
-        url: "/signup",
+        url: "/api/signup",
         data: userData
       }).then(function Success(res){
         var result = res.data;
@@ -119,4 +126,20 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
       };
     }
   };
+});
+
+app.controller('myInfoController', function($scope, $http){
+  var choose = "minfo";
+
+  $scope.isActive = function(info){
+    return choose == info;
+  };
+
+  $scope.getMyInfo = function(){
+    choose = "minfo";
+  };
+
+  $scope.getMyFeed = function(){
+    choose = "mfeed";
+  }
 });

@@ -3,7 +3,34 @@
 <% include ./partials/head %>
 <body ng-app="anony">
   <% include ./partials/nav %>
-  <div class="rows">
+  <div class="rows" ng-controller="myInfoController">
+    <div class="content-box">
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li role="presentation" ng-class="{ active : isActive('minfo') }"><a ng-click="getMyInfo()">My Info</a></li>
+          <li role="presentation" ng-class="{ active : isActive('mfeed') }"><a ng-click="getMyFeed()">My Feed</a></li>
+        </ul>
+      </div>
+      <div class="row" style="padding: 20px;">
+        <div class="row">
+          <div ng-show="isActive('minfo')">
+            <p>getMyInfo</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div ng-show="isActive('mfeed')">
+            <div class="feed-box">
+              <div class="feed-content">
+                <p>getMyFeed</p>
+                <p>{{ x.feed_text }}</p>
+                <div class="feed-date"><p>{{ x.feed_date }}</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <% include ./partials/script %>
 </body>

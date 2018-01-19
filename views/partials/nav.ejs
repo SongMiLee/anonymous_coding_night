@@ -1,14 +1,20 @@
-<div class="row">
-  <nav class="navbar navbar-default">
+<div class="row" ng-controller="navController">
+  <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#anonyNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <div class="navbar-brand"><img alt="Brand" src="img/brand.png" ></div>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/main">Feeds</a></li>
-        <li><a href="/mypage">My page</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="anonyNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ng-click="pageMove('/main')">Feeds</a></li>
+          <li><a ng-click="pageMove('/mypage')">User : <%= user_id %></a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
