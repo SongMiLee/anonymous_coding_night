@@ -6,6 +6,10 @@ body{
   /*background-color: 5F4B8B;*/
 }
 
+.error-page{
+  background-image: url("../img/404.png");
+}
+
 .app-theme{
   color : #5F4B8B;
   font-weight: bold;

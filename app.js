@@ -38,6 +38,7 @@ app.use( function(req,res,next) {
     return next();
 });
 
+
 app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
   if(req.session.user_id){
     next();
@@ -51,5 +52,8 @@ app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
 require('./router/index.js').setup(app, '/main');
 require('./router/api.js').setup(app, '/api');
 
+app.use(function(req, res, next){
+  res.status(404).send('Page Not found');
+});
 
 module.exports = app;
