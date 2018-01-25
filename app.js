@@ -48,8 +48,8 @@ app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
 });
 
 //add router
-require('./router/index').setup(app, '/main');
-require('./router/api').setup(app, '/api');
-require('./router/mypage').setup(app, '/mypage');
+require('./router/index.js').setup(app, '/main');
+require('./router/api.js').setup(app, '/api');
+
 
 module.exports = app;

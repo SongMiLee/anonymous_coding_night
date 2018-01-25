@@ -6,9 +6,15 @@ body{
   /*background-color: 5F4B8B;*/
 }
 
-.theme-color{
+.app-theme{
+  color : #5F4B8B;
+  font-weight: bold;
+}
+
+.btn-theme-color{
   background-color: #5F4B8B;
   border: 1px solid #5F4B8B;
+  color: #D3D3D3;
 }
 
 .navbar{
@@ -28,6 +34,23 @@ body{
   margin-top : 5%;
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.info-box{
+  margin: 5%;
+  margin-top: 10%;
+  padding: 20px;
+  border: solid 1px #D3D3D3;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.info-box-header{
+  font-weight: bold;
+  font-size: 18pt;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #D3D3D3;
 }
 
 .feed-writing-box{
@@ -66,6 +89,18 @@ body{
   height: 5px;
   margin-bottom: 20px;
   background-color: #5F4B8B;
+}
+
+.table-borderless tr,
+.table-borderless td,
+.table-borderless th {
+    border-top: none !important;
+}
+
+.table-borderless td input{
+  width: 100%;
+  border: 1px solid #D3D3D3;
+  padding-left: 5px;
 }
 
 #login-box{

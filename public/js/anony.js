@@ -8,9 +8,25 @@ app.config(function($locationProvider, $routeProvider){
   });
 });
 
-app.controller('navController', function($scope, $window){
+app.controller('navController', function($scope, $window, $http){
   $scope.pageMove = function(path){
     $window.location.href = path;
+  }
+
+  $scope.logout = function(){
+    $http({
+      method : "POST",
+      url    : '/api/logout',
+    }).then(function Success(res){
+      var ret = res.data.ret;
+      if(ret == 1){
+        alert(res.data.data);
+      }else{
+        $window.location.href = '/main';
+      }
+    }), function Fail(res){
+      alert("Sorry Internal Error");
+    };
   }
 });
 
@@ -22,11 +38,12 @@ app.controller('modiFeed', function($scope, $window, $http, $location, commonSer
       url: "/api/loadfeed"
     }).then(function Success(res){
       if(res.data.ret == 0){
-        var total = res.data.feeds;
+        var total = res.data.data;
         $scope.feedBox = total;
+
+        console.log(total);
       }else{
-        console.log(res.data.error);
-        alert.log("load fail");
+        alert(res.data.data);
       }
     }), function Fail(res){
       alert("load Fail");
@@ -60,7 +77,7 @@ app.controller('modiFeed', function($scope, $window, $http, $location, commonSer
   }
 });
 
-app.controller('loginControl', function($scope, $http, $window,sha256){
+app.controller('loginControl', function($scope, $http, $window, sha256){
 
   $scope.signIn = function(){
       if($scope.user_email == null || $scope.user_pwd == null){
@@ -128,8 +145,11 @@ app.controller('loginControl', function($scope, $http, $window,sha256){
   };
 });
 
-app.controller('myInfoController', function($scope, $http){
+app.controller('myInfoController', function($scope, $http, sha256){
   var choose = "minfo";
+  $scope.user = {};
+
+  getInfo($http, $scope);
 
   $scope.isActive = function(info){
     return choose == info;
@@ -137,9 +157,80 @@ app.controller('myInfoController', function($scope, $http){
 
   $scope.getMyInfo = function(){
     choose = "minfo";
+    getInfo($http, $scope);
   };
 
   $scope.getMyFeed = function(){
     choose = "mfeed";
+
+    $http({
+      method: "POST",
+      url: "/api/loadmyfeed"
+    }).then(function Success(res){
+      if(res.data.ret == 0){
+        var total = res.data.data;
+        $scope.feedBox = total;
+      }else{
+        alert(res.data.data);
+      }
+    }), function Fail(res){
+      alert("load Fail");
+    };
+  }
+
+  $scope.updateInfo = function(){
+
+    var cur_pwd = sha256.convertToSHA256($scope.current_pwd);
+
+    if(cur_pwd == $scope.user.user_pwd){
+      var cha_pwd = sha256.convertToSHA256($scope.change_pwd);
+      var con_pwd = sha256.convertToSHA256($scope.confirm_pwd);
+
+      if(cha_pwd == con_pwd){
+        $scope.user.user_pwd = con_pwd;
+
+        $http({
+          method  : "POST",
+          url     : "/api/updateinfo",
+          data    : $scope.user,
+        }).then(function Success(res){
+          var ret = res.data.ret;
+
+          if(ret == 0){
+            alert("Password Updated!");
+            $scope.current_pwd = '';
+            $scope.change_pwd = '';
+            $scope.confirm_pwd = '';
+          } else{
+            alert(res.data.data);
+          }
+        }), function Fail(res){
+          alert("Internal Error!");
+        };
+      }else{
+        alert("Password don't match");
+      }
+    } else {
+      alert("You enter the wrong password");
+    }
   }
 });
+
+function getInfo($http, $scope){
+  $http({
+    method : "POST",
+    url    : "/api/getinfo",
+  }).then(function Success(res){
+    if(res.data.ret == 0){
+      var data = res.data.data;
+      console.log(data);
+      $scope.user.user_email = data.user_email;
+      $scope.user.user_pwd   = data.user_pwd;
+    } else{
+      alert(res.data.data);
+    }
+
+  }), function Fail(result){
+    alert("Internal Error!");
+  };
+}

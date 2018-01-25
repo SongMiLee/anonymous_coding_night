@@ -7,12 +7,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"><img alt="Brand" src="img/brand.png" ></div>
+        <div class="navbar-brand"><img alt="Brand" src="/img/brand.png" ></div>
       </div>
       <div class="collapse navbar-collapse" id="anonyNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a ng-click="pageMove('/main/feed')">Feeds</a></li>
-          <li><a ng-click="pageMove('/main/mypage')">User : <%= user_id %></a></li>
+          <li><a href="" ng-click="pageMove('/main/feed')">Feeds</a></li>
+          <li><a href="" ng-click="pageMove('/main/mypage')">User : <%= user_id %></a></li>
+          <li><a href="" ng-click="logout()">Log out</a><li>
         </ul>
       </div>
     </div>

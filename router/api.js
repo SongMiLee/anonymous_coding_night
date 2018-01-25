@@ -2,7 +2,7 @@ require('date-utils');
 
 var setup = function(app, root){
   app.get(root + '/test', function(req, res){
-    res.redirect('/');
+    res.redirect('/main');
   });
 
   app.post(root + '/signup', function(req, res){
@@ -39,7 +39,6 @@ var setup = function(app, root){
         res.send({ret:1, data:"You're not our Member! Please Sign Up!"});
       }else{
         req.session.user_id = result[0].user_id;
-        console.log(req.session);
         res.send({ret:0, data: ""});
       }
     });
@@ -71,8 +70,34 @@ var setup = function(app, root){
 
   app.post(root + '/loadfeed', function(req, res){
     global.db.collection("feeds").find({}).toArray(function(err, result){
-      if(err) throw res.send({ret:0, error: err});
-      res.send({ret:0, feeds: result});
+      if(err) throw res.send({ret:1, data: err});
+      res.send({ret:0, data: result});
+    });
+  });
+
+  app.post(root + '/loadmyfeed', function(req, res){
+    global.db.collection("feeds").find({user_id : req.session.user_id}).toArray(function(err, result){
+      if(err) throw res.send({ret:1, data: err});
+      res.send({ret:0, data: result});
+    });
+  });
+
+  app.post(root + '/getinfo', function(req, res){
+    global.db.collection("users").find({user_id : req.session.user_id}).toArray(function(err, result){
+      if(err) throw res.send({ ret: 1, data: err});
+      res.send({ ret: 0, data : result[0]});
+    });
+  });
+
+  app.post(root + '/updateinfo', function(req, res){
+    var query = { user_id : req.session.user_id };
+    var update_user = {
+      $set : { user_pwd   : req.body.user_pwd }
+    };
+
+    global.db.collection("users").updateOne(query, update_user, function(err, result){
+      if (err) res.send({ret : 1, data : error});
+      res.send({ret : 0});
     });
   });
 };
