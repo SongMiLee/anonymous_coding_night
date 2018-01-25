@@ -34,7 +34,7 @@ class MainViewController: UIViewController, WKNavigationDelegate{
         super.viewDidLoad()
     
         //set Init url
-        let myURL = URL(string:"https://peaceful-anony-night.herokuapp.com/")
+        let myURL = URL(string:"https://peaceful-anony-night.herokuapp.com/main")
         let myReq = URLRequest(url: myURL!)
         self.webView.load(myReq)
     }
