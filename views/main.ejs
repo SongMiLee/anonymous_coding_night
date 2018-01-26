@@ -10,17 +10,17 @@
             <form>
               <table class="table table-borderless">
                 <tr>
-                  <td>Email</td>
                   <td>
                     <md-tooltip md-direction="right">Input your email address</md-tooltip>
-                    <input type="email" placeholder="anony@example.com" title="Email Form" ng-model="user_email" style="width:100%;">
+                    <label class="app-theme" for="email">Your Email</label>
+                    <input type="email" name="email" placeholder="Your Email" title="Email Form" ng-model="user_email" style="width:100%;">
                   </td>
                 </tr>
                 <tr>
-                  <td>Password</td>
                   <td>
                     <md-tooltip md-direction="right">Input your password</md-tooltip>
-                    <input type="password" pattern="^.{8,}$" title="more than 8 characters" placeholder="more than 8 characters" ng-model="user_pwd" style="width:100%;">
+                    <label class="app-theme" for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" pattern="^.{8,}$" title="more than 8 characters" ng-model="user_pwd" style="width:100%;">
                   </td>
                 </tr>
               </table>
