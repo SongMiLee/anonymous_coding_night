@@ -1,5 +1,4 @@
-var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption', 'commonService']);
-var global_user_id = '';
+var app = angular.module('anony',['ngMaterial', 'ngRoute','angular-encryption']);
 
 app.config(function($locationProvider, $routeProvider){
   $locationProvider.html5Mode({
@@ -30,8 +29,9 @@ app.controller('navController', function($scope, $window, $http){
   }
 });
 
-app.controller('modiFeed', function($scope, $window, $http, $location, commonService){
+app.controller('modiFeed', function($scope, $window, $http, $location){
   $scope.feedData = {};
+  $scope.modal = {};
 
     $http({
       method: "POST",
@@ -43,15 +43,23 @@ app.controller('modiFeed', function($scope, $window, $http, $location, commonSer
 
         console.log(total);
       }else{
-        alert(res.data.data);
+        $scope.modal.msg = '서버 에러입니다. 잠시 후 시도해 주십시오.';
+        $scope.modal.header = 'Feed Error';
+        $scope.showModal = true;
       }
     }), function Fail(res){
-      alert("load Fail");
+      //alert("load Fail");
+      $scope.modal.msg = 'Feed 불러오기를 실패했습니다.';
+      $scope.modal.header = 'Feed Error';
+      $scope.showModal = true;
     };
 
   $scope.sendFeed = function(){
     if($scope.feedData.feed_text == null){
-      alert("글을 입력해 주시길 바랍니다.");
+      //alert('글자를 입력해 주세요');
+      $scope.modal.msg = '글자를 입력해 주세요.';
+      $scope.modal.header = 'Feed Error';
+      $scope.showModal = true;
     } else {
       $http({
         method: "POST",
@@ -62,7 +70,10 @@ app.controller('modiFeed', function($scope, $window, $http, $location, commonSer
         var result = res.data.ret;
 
         if(result == 1){
-          alert("Send Fail");
+          //alert("Send Fail");
+          $scope.modal.msg = '전송에 실패했습니다. 잠시 후 다시 시도해 주십시오.';
+          $scope.modal.header = 'Feed Error';
+          $scope.showModal = true;
           console.log(res.data.error);
         }else{
           $window.location.reload();
@@ -71,17 +82,23 @@ app.controller('modiFeed', function($scope, $window, $http, $location, commonSer
         $scope.feedData.text = "";
       }, function Fail(res){
         console.log(res);
-        alert("Internal Error!");
+        //alert("Internal Error!");
+        $scope.modal.msg = '내부 오류 입니다. 잠시 후 다시 시도해 주십시오.';
+        $scope.modal.header = 'Feed Error';
+        $scope.showModal = true;
       });
     }
   }
 });
 
 app.controller('loginControl', function($scope, $http, $window, sha256){
+  $scope.modal = {};
 
   $scope.signIn = function(){
       if($scope.user_email == null || $scope.user_pwd == null){
-        alert("입력 값을 다시 확인해 주십시오");
+        $scope.modal.msg = '입력 값을 확인해 주세요';
+        $scope.modal.header = 'Login Error';
+        $scope.showModal = true;
       }else{
         var pwd = sha256.convertToSHA256($scope.user_pwd);
 
@@ -99,7 +116,10 @@ app.controller('loginControl', function($scope, $http, $window, sha256){
           if(result.ret == 1){
             $scope.user_email = "";
             $scope.user_pwd = "";
-            alert(result.data);
+
+            $scope.modal.msg = result.data;
+            $scope.modal.header = 'Login Error';
+            $scope.showModal = true;
           }else{
             $scope.user_email = "";
             $scope.user_pwd = "";
@@ -113,7 +133,9 @@ app.controller('loginControl', function($scope, $http, $window, sha256){
 
   $scope.signUp = function(){
     if($scope.user_email == null || $scope.user_pwd == null){
-      alert("입력 값을 다시 확인해 주십시오");
+      $scope.modal.msg = '입력 값을 확인해 주세요';
+      $scope.modal.header = 'Login Error';
+      $scope.showModal = true;
     }else{
       var pwd = sha256.convertToSHA256($scope.user_pwd);
 
@@ -148,6 +170,7 @@ app.controller('loginControl', function($scope, $http, $window, sha256){
 app.controller('myInfoController', function($scope, $http, sha256){
   var choose = "minfo";
   $scope.user = {};
+  $scope.modal = {};
 
   getInfo($http, $scope);
 
@@ -197,21 +220,30 @@ app.controller('myInfoController', function($scope, $http, sha256){
           var ret = res.data.ret;
 
           if(ret == 0){
-            alert("Password Updated!");
+            $scope.modal.msg = '정보가 변경되었습니다.';
+            $scope.modal.header = 'Info Success';
+            $scope.showModal = true;
+
             $scope.current_pwd = '';
             $scope.change_pwd = '';
             $scope.confirm_pwd = '';
           } else{
-            alert(res.data.data);
+            $scope.modal.msg = res.data.data;
+            $scope.modal.header = 'Info Error';
+            $scope.showModal = true;
           }
         }), function Fail(res){
           alert("Internal Error!");
         };
       }else{
-        alert("Password don't match");
+        $scope.modal.msg = '비밀번호가 맞지 않습니다.';
+        $scope.modal.header = 'Info Error';
+        $scope.showModal = true;
       }
     } else {
-      alert("You enter the wrong password");
+      $scope.modal.msg = '현 비밀번호를 잘못 입력하셨습니다.';
+      $scope.modal.header = 'Info Error';
+      $scope.showModal = true;
     }
   }
 });

@@ -4,8 +4,8 @@
 <body ng-app="anony">
   <% include ./partials/nav %>
 
-  <div class="row">
-    <div class="content-box" ng-controller="modiFeed">
+  <div class="row" ng-controller="modiFeed">
+    <div class="content-box" ng-init="showModal=false">
       <!-- feed writing box -->
       <div class="row">
         <form class="feed-writing-box">
@@ -15,7 +15,7 @@
             <textarea ng-model="feedData.feed_text" name="feedText" class="form-control" rows="4" placeholder="내용을 입력해 주세요."></textarea>
           </div>
           <div>
-            <button type="button" class="btn btn-default btn-theme-color" id="btn-submit-feed" ng-click="sendFeed()">submit</button>
+            <button type="button" class="btn btn-default btn-theme-color" id="btn-submit-feed" data-toggle="modal" data-target="#feedModal" ng-click="sendFeed()">submit</button>
           </div>
         </form>
       </div>
@@ -31,6 +31,23 @@
           </div>
         </div>
       </div>
+
+      <div id="feedModal" class="modal fade" ng-show="showModal" role="dialog">
+        <div class="modal-dialog modal-dialog-margin">
+          <div class="modal-content">
+            <div class="modal-header btn-theme-color">
+              <h2>{{ modal.header }}</h2>
+            </div>
+            <div class="modal-body">
+              <p>{{ modal.msg }}</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default btn-theme-color" data-dismiss="modal" ng-click="showModal=false">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

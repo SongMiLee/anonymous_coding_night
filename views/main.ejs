@@ -1,12 +1,12 @@
 <html>
 <% include ./partials/head %>
-<body>
+<body ng-app="anony">
 
-  <div class="row" ng-app="anony">
-    <div class="content-box">
+  <div class="row" ng-controller="loginControl">
+    <div class="content-box" ng-init="showModal=false">
       <div id="login-box">
         <div id="login-box-align">
-          <div id="login-box-content" ng-controller="loginControl" ng-cloak>
+          <div id="login-box-content">
             <form>
               <table class="table table-borderless">
                 <tr>
@@ -25,13 +25,30 @@
                 </tr>
               </table>
 
-              <button type="button" class="btn btn-default btn-theme-color" style="width:100%; margin-bottom:20px;" ng-click="signIn()">Login in</button>
+              <button type="button" class="btn btn-default btn-theme-color" style="width:100%; margin-bottom:20px;" data-toggle="modal" data-target="#loginModal" ng-click="signIn()">Login in</button>
               <div class="seperator"></div>
-              <button type="button" class="btn btn-default" style="width:100%; margin-bottom:20px;" ng-click="signUp()">Create Account</button>
+              <button type="button" class="btn btn-default" style="width:100%; margin-bottom:20px;" data-toggle="modal" data-target="#loginModal" ng-click="signUp()">Create Account</button>
             </form>
           </div>
         </div>
       </div>
+
+      <div id="loginModal" class="modal fade" ng-show="showModal" role="dialog">
+        <div class="modal-dialog modal-dialog-margin">
+          <div class="modal-content">
+            <div class="modal-header btn-theme-color">
+              <h2>{{ modal.header }}</h2>
+            </div>
+            <div class="modal-body">
+              <p>{{ modal.msg }}</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default btn-theme-color" data-dismiss="modal" ng-click="showModal=false">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

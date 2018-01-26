@@ -4,7 +4,7 @@
 <body ng-app="anony">
   <% include ./partials/nav %>
   <div class="rows" ng-controller="myInfoController">
-    <div class="content-box">
+    <div class="content-box" ng-init="showModal=false">
       <div class="row">
         <ul class="nav nav-tabs">
           <li role="presentation" ng-class="{ active : isActive('minfo') }"><a class="app-theme" href="" ng-click="getMyInfo()">My Info</a></li>
@@ -37,7 +37,7 @@
                   </tr>
                 </table>
 
-                <button type="submit" class="btn btn-default btn-theme-color" style="width:100%">Confirm</button>
+                <button type="submit" class="btn btn-default btn-theme-color" data-toggle="modal" data-target="#infoModal" style="width:100%">Confirm</button>
               </form>
 
             </div>
@@ -56,6 +56,23 @@
         </div>
 
       </div>
+
+      <div id="infoModal" class="modal fade" ng-show="showModal" role="dialog">
+        <div class="modal-dialog modal-dialog-margin">
+          <div class="modal-content">
+            <div class="modal-header btn-theme-color">
+              <h2>{{ modal.header }}</h2>
+            </div>
+            <div class="modal-body">
+              <p>{{ modal.msg }}</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default btn-theme-color" data-dismiss="modal" ng-click="showModal=false">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <% include ./partials/script %>

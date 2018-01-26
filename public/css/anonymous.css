@@ -2,8 +2,13 @@ body{
   @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
-  height: 100%;
+  height: auto;
   /*background-color: 5F4B8B;*/
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 .error-page{
@@ -107,13 +112,25 @@ body{
   padding-left: 5px;
 }
 
+
+@media screen and (max-width: 480px) {
+  .modal-dialog-margin{
+    margin-left: 7%;
+    margin-right: 10%;
+  }
+}
+
 #login-box{
   margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
   height: 80%;
   width: 100%;
   background-image: url("../img/back.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 #login-box-align{
   padding-top: 15%;
   margin-right: 10%;
