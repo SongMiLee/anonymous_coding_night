@@ -38,6 +38,10 @@ app.use( function(req,res,next) {
     return next();
 });
 
+app.route(/^\/$/).all(function(req, res, next){
+  req.url = '/main';
+  next();
+});
 
 app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
   if(req.session.user_id){
