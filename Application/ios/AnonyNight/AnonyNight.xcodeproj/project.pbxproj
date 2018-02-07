@@ -14,6 +14,7 @@
 		34FFF955202A966500D62062 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF954202A966500D62062 /* LoginController.swift */; };
 		34FFF957202ABE6400D62062 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF956202ABE6400D62062 /* RegisterController.swift */; };
 		34FFF959202AC9CD00D62062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FFF958202AC9CD00D62062 /* Main.storyboard */; };
+		34FFF95C202AD21700D62062 /* NetReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF95B202AD21700D62062 /* NetReq.swift */; };
 		739EB8B3936211449553CB6E /* Pods_AnonyNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		34FFF954202A966500D62062 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		34FFF956202ABE6400D62062 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		34FFF958202AC9CD00D62062 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		34FFF95B202AD21700D62062 /* NetReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetReq.swift; sourceTree = "<group>"; };
 		D03B4A70ECD69248B40720E4 /* Pods-AnonyNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.release.xcconfig"; sourceTree = "<group>"; };
 		FFF275480C282AA9EB1E67FB /* Pods-AnonyNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		34FFF93F202A950700D62062 /* AnonyNight */ = {
 			isa = PBXGroup;
 			children = (
+				34FFF95A202AD1E300D62062 /* Network */,
 				34FFF953202A962000D62062 /* ViewController */,
 				34FFF952202A95E100D62062 /* storyboard */,
 				34FFF940202A950700D62062 /* AppDelegate.swift */,
@@ -91,6 +94,14 @@
 				34FFF956202ABE6400D62062 /* RegisterController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		34FFF95A202AD1E300D62062 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34FFF95B202AD21700D62062 /* NetReq.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		36D70770560AEE86F46383C8 /* Frameworks */ = {
@@ -242,6 +253,7 @@
 			files = (
 				34FFF955202A966500D62062 /* LoginController.swift in Sources */,
 				34FFF941202A950700D62062 /* AppDelegate.swift in Sources */,
+				34FFF95C202AD21700D62062 /* NetReq.swift in Sources */,
 				34FFF957202ABE6400D62062 /* RegisterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
