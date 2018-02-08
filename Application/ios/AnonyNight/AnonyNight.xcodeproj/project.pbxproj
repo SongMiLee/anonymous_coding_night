@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34285017202BC7C9009B0DC3 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34285016202BC7C9009B0DC3 /* FeedController.swift */; };
+		34285019202BCAF7009B0DC3 /* FeedCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34285018202BCAF7009B0DC3 /* FeedCellController.swift */; };
+		34285026202BDEF9009B0DC3 /* Maplestory OTF Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34285024202BDEF8009B0DC3 /* Maplestory OTF Bold.otf */; };
+		34285027202BDEF9009B0DC3 /* Maplestory OTF Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34285025202BDEF9009B0DC3 /* Maplestory OTF Light.otf */; };
+		343D7DCB202C2408008C4922 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D7DCA202C2408008C4922 /* User.swift */; };
+		343D7DCE202C24C4008C4922 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D7DCD202C24C4008C4922 /* MyInfoViewController.swift */; };
 		34FFF941202A950700D62062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF940202A950700D62062 /* AppDelegate.swift */; };
 		34FFF946202A950700D62062 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FFF944202A950700D62062 /* Login.storyboard */; };
 		34FFF948202A950700D62062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34FFF947202A950700D62062 /* Assets.xcassets */; };
@@ -15,11 +21,18 @@
 		34FFF957202ABE6400D62062 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF956202ABE6400D62062 /* RegisterController.swift */; };
 		34FFF959202AC9CD00D62062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FFF958202AC9CD00D62062 /* Main.storyboard */; };
 		34FFF95C202AD21700D62062 /* NetReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF95B202AD21700D62062 /* NetReq.swift */; };
+		34FFF95E202ADFE800D62062 /* extensionCALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF95D202ADFE800D62062 /* extensionCALayer.swift */; };
 		739EB8B3936211449553CB6E /* Pods_AnonyNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnonyNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34285016202BC7C9009B0DC3 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		34285018202BCAF7009B0DC3 /* FeedCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellController.swift; sourceTree = "<group>"; };
+		34285024202BDEF8009B0DC3 /* Maplestory OTF Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maplestory OTF Bold.otf"; sourceTree = "<group>"; };
+		34285025202BDEF9009B0DC3 /* Maplestory OTF Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maplestory OTF Light.otf"; sourceTree = "<group>"; };
+		343D7DCA202C2408008C4922 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		343D7DCD202C24C4008C4922 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		34FFF93D202A950700D62062 /* AnonyNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonyNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FFF940202A950700D62062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34FFF945202A950700D62062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -30,6 +43,7 @@
 		34FFF956202ABE6400D62062 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		34FFF958202AC9CD00D62062 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		34FFF95B202AD21700D62062 /* NetReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetReq.swift; sourceTree = "<group>"; };
+		34FFF95D202ADFE800D62062 /* extensionCALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionCALayer.swift; sourceTree = "<group>"; };
 		D03B4A70ECD69248B40720E4 /* Pods-AnonyNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.release.xcconfig"; sourceTree = "<group>"; };
 		FFF275480C282AA9EB1E67FB /* Pods-AnonyNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3428501F202BDA5A009B0DC3 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				34285024202BDEF8009B0DC3 /* Maplestory OTF Bold.otf */,
+				34285025202BDEF9009B0DC3 /* Maplestory OTF Light.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		343D7DCC202C241B008C4922 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				343D7DCA202C2408008C4922 /* User.swift */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		34FFF934202A950700D62062 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +99,9 @@
 		34FFF93F202A950700D62062 /* AnonyNight */ = {
 			isa = PBXGroup;
 			children = (
+				343D7DCC202C241B008C4922 /* Model */,
+				3428501F202BDA5A009B0DC3 /* Font */,
+				34FFF95F202AE3FE00D62062 /* Etc */,
 				34FFF95A202AD1E300D62062 /* Network */,
 				34FFF953202A962000D62062 /* ViewController */,
 				34FFF952202A95E100D62062 /* storyboard */,
@@ -92,6 +127,9 @@
 			children = (
 				34FFF954202A966500D62062 /* LoginController.swift */,
 				34FFF956202ABE6400D62062 /* RegisterController.swift */,
+				34285016202BC7C9009B0DC3 /* FeedController.swift */,
+				34285018202BCAF7009B0DC3 /* FeedCellController.swift */,
+				343D7DCD202C24C4008C4922 /* MyInfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -102,6 +140,14 @@
 				34FFF95B202AD21700D62062 /* NetReq.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		34FFF95F202AE3FE00D62062 /* Etc */ = {
+			isa = PBXGroup;
+			children = (
+				34FFF95D202ADFE800D62062 /* extensionCALayer.swift */,
+			);
+			path = Etc;
 			sourceTree = "<group>";
 		};
 		36D70770560AEE86F46383C8 /* Frameworks */ = {
@@ -183,7 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34285027202BDEF9009B0DC3 /* Maplestory OTF Light.otf in Resources */,
 				34FFF94B202A950700D62062 /* LaunchScreen.storyboard in Resources */,
+				34285026202BDEF9009B0DC3 /* Maplestory OTF Bold.otf in Resources */,
 				34FFF948202A950700D62062 /* Assets.xcassets in Resources */,
 				34FFF946202A950700D62062 /* Login.storyboard in Resources */,
 				34FFF959202AC9CD00D62062 /* Main.storyboard in Resources */,
@@ -251,10 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343D7DCB202C2408008C4922 /* User.swift in Sources */,
 				34FFF955202A966500D62062 /* LoginController.swift in Sources */,
+				34285017202BC7C9009B0DC3 /* FeedController.swift in Sources */,
 				34FFF941202A950700D62062 /* AppDelegate.swift in Sources */,
 				34FFF95C202AD21700D62062 /* NetReq.swift in Sources */,
+				34FFF95E202ADFE800D62062 /* extensionCALayer.swift in Sources */,
 				34FFF957202ABE6400D62062 /* RegisterController.swift in Sources */,
+				343D7DCE202C24C4008C4922 /* MyInfoViewController.swift in Sources */,
+				34285019202BCAF7009B0DC3 /* FeedCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
