@@ -44,6 +44,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
     }
     
     @objc func login(sender : UITapGestureRecognizer){
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainController")
         
