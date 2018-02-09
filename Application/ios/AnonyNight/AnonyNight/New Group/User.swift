@@ -8,9 +8,10 @@
 
 import Foundation
 
-class User {
-    var userToken:String?
-    var userName:String?
-    var userEmail:String?
-    var autoLogin:Bool
-}
+/*class User {
+    //var userToken:String?
+    //var userName:String?
+    //var userEmail:String?
+    //var autoLogin:Bool
+    
+}*/
