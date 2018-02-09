@@ -34,7 +34,7 @@ extension FeedController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = feedTable.dequeueReusableCell(withIdentifier: "FeedCellController", for: indexPath) as! FeedCellController
+        let cell = feedTable.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
         
         cell.feedText.text = testFeedText[indexPath.row]
         cell.feedDate.text = testFeedDate[indexPath.row]

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FeedCellController : UITableViewCell{
+class FeedCell : UITableViewCell{
     @IBOutlet weak var feedText: UITextView!
     @IBOutlet weak var feedDate: UILabel!
     

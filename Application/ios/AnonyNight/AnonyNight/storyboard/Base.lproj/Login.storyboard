@@ -77,7 +77,7 @@
                                                 <rect key="frame" x="28" y="0.0" width="295" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="MaplestoryOTFLight" family="Maplestory OTF" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -183,7 +183,7 @@
                                         <rect key="frame" x="28" y="0.0" width="315" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="MaplestoryOTFLight" family="Maplestory OTF" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" textContentType="username"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
