@@ -45,11 +45,20 @@
                                                     <constraint firstAttribute="width" constant="18" id="ig1-Jv-GAi"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-og-4vp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-og-4vp" customClass="ErrorTextField" customModule="Material">
                                                 <rect key="frame" x="28" y="0.0" width="295" height="30"/>
+                                                <color key="tintColor" red="0.32091027498245239" green="0.28523933887481689" blue="0.55338740348815918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="MaplestoryOTFLight" family="Maplestory OTF" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="User Email"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Error! incorrect Email"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="detailVerticalOffset">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -64,7 +73,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnY-sW-hA8" userLabel="Password Field">
-                                        <rect key="frame" x="10" y="100" width="323" height="30"/>
+                                        <rect key="frame" x="10" y="120" width="323" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock" translatesAutoresizingMaskIntoConstraints="NO" id="rAP-BX-wGH">
                                                 <rect key="frame" x="5" y="5" width="18" height="18"/>
@@ -73,11 +82,17 @@
                                                     <constraint firstAttribute="height" constant="18" id="WlO-x0-jFs"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSE-al-G7I">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSE-al-G7I" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="28" y="0.0" width="295" height="30"/>
+                                                <color key="tintColor" red="0.32091027498245239" green="0.28523933887481689" blue="0.55338740348815918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="MaplestoryOTFLight" family="Maplestory OTF" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="User Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClearIconButtonEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Password must be more than 8 characters"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -92,7 +107,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlF-Og-GYf">
-                                        <rect key="frame" x="10" y="160" width="323" height="30"/>
+                                        <rect key="frame" x="10" y="200" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.29496487975120544" green="0.22768229246139526" blue="0.45198202133178711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Tsc-XY-Clf"/>
@@ -101,7 +116,7 @@
                                         <state key="normal" title="Login"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFI-XS-5ze">
-                                        <rect key="frame" x="10" y="220" width="323" height="30"/>
+                                        <rect key="frame" x="10" y="260" width="323" height="30"/>
                                         <color key="backgroundColor" red="0.29496487975120544" green="0.22768229246139526" blue="0.45198202133178711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="9iI-2J-BAF"/>
@@ -122,8 +137,8 @@
                                     <constraint firstAttribute="trailing" secondItem="l1o-bi-9XN" secondAttribute="trailing" constant="10" id="KFF-O1-dIG"/>
                                     <constraint firstItem="l1o-bi-9XN" firstAttribute="leading" secondItem="d32-If-31C" secondAttribute="leading" constant="10" id="MTc-WY-94v"/>
                                     <constraint firstItem="uFI-XS-5ze" firstAttribute="top" secondItem="wlF-Og-GYf" secondAttribute="bottom" constant="30" id="dXg-6b-sMb"/>
-                                    <constraint firstItem="wlF-Og-GYf" firstAttribute="top" secondItem="lnY-sW-hA8" secondAttribute="bottom" constant="30" id="mHa-ZK-DNR"/>
-                                    <constraint firstItem="lnY-sW-hA8" firstAttribute="top" secondItem="l1o-bi-9XN" secondAttribute="bottom" constant="30" id="mTx-v5-bqI"/>
+                                    <constraint firstItem="wlF-Og-GYf" firstAttribute="top" secondItem="lnY-sW-hA8" secondAttribute="bottom" constant="50" id="mHa-ZK-DNR"/>
+                                    <constraint firstItem="lnY-sW-hA8" firstAttribute="top" secondItem="l1o-bi-9XN" secondAttribute="bottom" constant="50" id="mTx-v5-bqI"/>
                                     <constraint firstItem="lnY-sW-hA8" firstAttribute="leading" secondItem="d32-If-31C" secondAttribute="leading" constant="10" id="ufx-dh-YoB"/>
                                 </constraints>
                             </view>
@@ -147,7 +162,7 @@
                     <connections>
                         <outlet property="loginBtn" destination="wlF-Og-GYf" id="RPf-Ta-4Xh"/>
                         <outlet property="registerBtn" destination="uFI-XS-5ze" id="vAx-jP-gfb"/>
-                        <outlet property="userEmail" destination="Zhw-og-4vp" id="13d-gY-WPs"/>
+                        <outlet property="userEmail" destination="Zhw-og-4vp" id="fWB-rV-hdj"/>
                         <outlet property="userPwd" destination="pSE-al-G7I" id="7Y9-Yz-8a0"/>
                     </connections>
                 </viewController>

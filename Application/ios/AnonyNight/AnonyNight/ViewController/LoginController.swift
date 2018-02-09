@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import Material
 
 class LoginController : UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var userEmail: UITextField!
-    @IBOutlet weak var userPwd: UITextField!
+    
+    @IBOutlet weak var userEmail: ErrorTextField!
+    @IBOutlet weak var userPwd: TextField!
     
     @IBOutlet weak var loginBtn: UIButton!{
         didSet{

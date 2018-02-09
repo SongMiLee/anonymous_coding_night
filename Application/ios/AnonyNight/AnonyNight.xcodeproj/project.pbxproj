@@ -22,11 +22,10 @@
 		34FFF959202AC9CD00D62062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FFF958202AC9CD00D62062 /* Main.storyboard */; };
 		34FFF95C202AD21700D62062 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF95B202AD21700D62062 /* APIRequest.swift */; };
 		34FFF95E202ADFE800D62062 /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FFF95D202ADFE800D62062 /* extensionUIView.swift */; };
-		739EB8B3936211449553CB6E /* Pods_AnonyNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */; };
+		C1FE711CD37486B08D5B673A /* Pods_AnonyNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEEA67B2E589C1101196BB9 /* Pods_AnonyNight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnonyNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342339F2202D371F00836386 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		342339F3202D371F00836386 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		34285016202BC7C9009B0DC3 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
@@ -44,8 +43,9 @@
 		34FFF958202AC9CD00D62062 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		34FFF95B202AD21700D62062 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		34FFF95D202ADFE800D62062 /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
-		D03B4A70ECD69248B40720E4 /* Pods-AnonyNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.release.xcconfig"; sourceTree = "<group>"; };
-		FFF275480C282AA9EB1E67FB /* Pods-AnonyNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.debug.xcconfig"; sourceTree = "<group>"; };
+		3ED7C75474633D2CCED17AF2 /* Pods-AnonyNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.release.xcconfig"; sourceTree = "<group>"; };
+		6FEEA67B2E589C1101196BB9 /* Pods_AnonyNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnonyNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9243691D96A07975862C804C /* Pods-AnonyNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonyNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +53,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739EB8B3936211449553CB6E /* Pods_AnonyNight.framework in Frameworks */,
+				C1FE711CD37486B08D5B673A /* Pods_AnonyNight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0962F4AED881E68AFCB69AB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9243691D96A07975862C804C /* Pods-AnonyNight.debug.xcconfig */,
+				3ED7C75474633D2CCED17AF2 /* Pods-AnonyNight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		342339F6202D373700836386 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +92,8 @@
 			children = (
 				34FFF93F202A950700D62062 /* AnonyNight */,
 				34FFF93E202A950700D62062 /* Products */,
-				EF80162175D464EC45F1985F /* Pods */,
-				36D70770560AEE86F46383C8 /* Frameworks */,
+				0962F4AED881E68AFCB69AB2 /* Pods */,
+				53475D72B895AEF005A8B4AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,21 +158,12 @@
 			path = Etc;
 			sourceTree = "<group>";
 		};
-		36D70770560AEE86F46383C8 /* Frameworks */ = {
+		53475D72B895AEF005A8B4AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CE86A26F16A0731AFCD380E /* Pods_AnonyNight.framework */,
+				6FEEA67B2E589C1101196BB9 /* Pods_AnonyNight.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EF80162175D464EC45F1985F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FFF275480C282AA9EB1E67FB /* Pods-AnonyNight.debug.xcconfig */,
-				D03B4A70ECD69248B40720E4 /* Pods-AnonyNight.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,12 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34FFF94F202A950700D62062 /* Build configuration list for PBXNativeTarget "AnonyNight" */;
 			buildPhases = (
-				54672C287DDB31732932AFC9 /* [CP] Check Pods Manifest.lock */,
+				8F6DD0FD993C745676827096 /* [CP] Check Pods Manifest.lock */,
 				34FFF939202A950700D62062 /* Sources */,
 				34FFF93A202A950700D62062 /* Frameworks */,
 				34FFF93B202A950700D62062 /* Resources */,
-				35657A4CD4B4E30668FBD57D /* [CP] Embed Pods Frameworks */,
-				2C4BEF0FE83C5727D2A1FD53 /* [CP] Copy Pods Resources */,
+				CAC39DA6A37019D6EEE7CAF3 /* [CP] Embed Pods Frameworks */,
+				037C55888EE25A86F1812CD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,7 +240,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C4BEF0FE83C5727D2A1FD53 /* [CP] Copy Pods Resources */ = {
+		037C55888EE25A86F1812CD0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,25 +255,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		35657A4CD4B4E30668FBD57D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		54672C287DDB31732932AFC9 /* [CP] Check Pods Manifest.lock */ = {
+		8F6DD0FD993C745676827096 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,6 +271,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAC39DA6A37019D6EEE7CAF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnonyNight/Pods-AnonyNight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -441,7 +445,7 @@
 		};
 		34FFF950202A950700D62062 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFF275480C282AA9EB1E67FB /* Pods-AnonyNight.debug.xcconfig */;
+			baseConfigurationReference = 9243691D96A07975862C804C /* Pods-AnonyNight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,7 +462,7 @@
 		};
 		34FFF951202A950700D62062 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D03B4A70ECD69248B40720E4 /* Pods-AnonyNight.release.xcconfig */;
+			baseConfigurationReference = 3ED7C75474633D2CCED17AF2 /* Pods-AnonyNight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
