@@ -54,7 +54,10 @@ app.route(/^\/main(?:\/(.*))?$/).all(function(req, res, next){
 
 //add router
 require('./router/index.js').setup(app, '/main');
-require('./router/api.js').setup(app, '/api');
+require('./router/common.js').setup(app, '/common');
+require('./router/feed.js').setup(app, '/feed');
+require('./router/info.js').setup(app, '/info');
+require('./router/m/common.js').setup(app, '/m/common');
 
 app.use(function(req, res, next){
   res.status(404).send('Page Not found');

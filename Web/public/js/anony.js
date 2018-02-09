@@ -15,7 +15,7 @@ app.controller('navController', function($scope, $window, $http){
   $scope.logout = function(){
     $http({
       method : "POST",
-      url    : '/api/logout',
+      url    : '/common/logout',
     }).then(function Success(res){
       var ret = res.data.ret;
       if(ret == 1){
@@ -35,7 +35,7 @@ app.controller('modiFeed', function($scope, $window, $http, $location){
 
     $http({
       method: "POST",
-      url: "/api/loadfeed"
+      url: "/feed/loadfeed"
     }).then(function Success(res){
       if(res.data.ret == 0){
         var total = res.data.data;
@@ -63,7 +63,7 @@ app.controller('modiFeed', function($scope, $window, $http, $location){
     } else {
       $http({
         method: "POST",
-        url: "/api/sendfeed",
+        url: "/feed/sendfeed",
         data: $scope.feedData,
       }).then(function Success(res){
         console.log(res.data);
@@ -109,7 +109,7 @@ app.controller('loginControl', function($scope, $http, $window, sha256){
         //로그인
         $http({
           method:"POST",
-          url: "/api/signin",
+          url: "/common/login",
           data: userData
         }).then(function Success(res){
           var result = res.data;
@@ -147,7 +147,7 @@ app.controller('loginControl', function($scope, $http, $window, sha256){
       //가입
       $http({
         method:"POST",
-        url: "/api/signup",
+        url: "/common/register",
         data: userData
       }).then(function Success(res){
         var result = res.data;
@@ -188,7 +188,7 @@ app.controller('myInfoController', function($scope, $http, sha256){
 
     $http({
       method: "POST",
-      url: "/api/loadmyfeed"
+      url: "/feed/loadmyfeed"
     }).then(function Success(res){
       if(res.data.ret == 0){
         var total = res.data.data;
@@ -214,7 +214,7 @@ app.controller('myInfoController', function($scope, $http, sha256){
 
         $http({
           method  : "POST",
-          url     : "/api/updateinfo",
+          url     : "/info/updateinfo",
           data    : $scope.user,
         }).then(function Success(res){
           var ret = res.data.ret;
@@ -251,7 +251,7 @@ app.controller('myInfoController', function($scope, $http, sha256){
 function getInfo($http, $scope){
   $http({
     method : "POST",
-    url    : "/api/getinfo",
+    url    : "/info/getinfo",
   }).then(function Success(res){
     if(res.data.ret == 0){
       var data = res.data.data;

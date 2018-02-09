@@ -44,6 +44,15 @@ class LoginController : UIViewController, UITextFieldDelegate {
     }
     
     @objc func login(sender : UITapGestureRecognizer){
+        var param:[String:Any] = [:]
+        if let user_email = userEmail.text, let user_pwd = userPwd.text{
+            param = [
+                "user_email" : user_email,
+                "user_pwd"   : user_pwd,
+            ]
+        }
+        
+        
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainController")
