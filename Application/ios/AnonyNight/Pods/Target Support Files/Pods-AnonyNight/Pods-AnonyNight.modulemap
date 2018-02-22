@@ -1,6 +1,0 @@
-framework module Pods_AnonyNight {
-  umbrella header "Pods-AnonyNight-umbrella.h"
-
-  export *
-  module * { export * }
-}

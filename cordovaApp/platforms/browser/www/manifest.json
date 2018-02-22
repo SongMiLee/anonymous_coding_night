@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "testApp",
+  "short_name": "testApp",
+  "version": "test.test.hello.test2",
+  "description": "A blank PhoneGap app.",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "start_url": "index.html"
+}

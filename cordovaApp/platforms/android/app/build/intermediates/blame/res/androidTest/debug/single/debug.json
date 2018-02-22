@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_login_symbol.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_login_symbol.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-small_kakaostory_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-small/kakaostory_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_cancel_button_background.xml.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_cancel_button_background.xml"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_account_button_background.xml.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_account_button_background.xml"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_editable_profile.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_editable_profile.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-hdpi_kakaostory_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-hdpi/kakaostory_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_login_button_background.9.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_login_button_background.9.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-small_kakaoaccount_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-small/kakaoaccount_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-hdpi_kakaotalk_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-hdpi/kakaotalk_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/layout_kakao_login_layout.xml.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/layout/kakao_login_layout.xml"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi_kakaotalk_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xhdpi/kakaotalk_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi_kakaoaccount_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xxhdpi/kakaoaccount_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi_kakaostory_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xhdpi/kakaostory_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/layout_kakao_internal_login_activity.xml.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/layout/kakao_internal_login_activity.xml"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_close_button.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/auth-1.1.4.aar/56ffb3ac25ce30991c5f17fa89aae73f/res/drawable/kakao_close_button.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_account_logo.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_account_logo.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_login_bar.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_login_bar.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_profile_boxbg.9.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_profile_boxbg.9.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi_kakaostory_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xxhdpi/kakaostory_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi_kakaotalk_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xxhdpi/kakaotalk_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-small_kakaotalk_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-small/kakaotalk_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi_kakaoaccount_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-xhdpi/kakaoaccount_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable-hdpi_kakaoaccount_icon.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable-hdpi/kakaoaccount_icon.png"
+    },
+    {
+        "merged": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/res/merged/androidTest/debug/drawable_kakao_default_profile_image.png.flat",
+        "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/drawable/kakao_default_profile_image.png"
+    }
+]

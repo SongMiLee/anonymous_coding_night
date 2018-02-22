@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="test.test.hello.test2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="BrowserTab">
+        <param name="android-package" value="com.google.cordova.plugin.browsertab.BrowserTab" />
+    </feature>
+    <feature name="BuildInfo">
+        <param name="android-package" value="org.apache.cordova.buildinfo.BuildInfo" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+    <feature name="LaunchMyApp">
+        <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="KakaoTalk">
+        <param name="android-package" value="com.lihak.plugin.kakao.KakaoTalk" />
+    </feature>
+    <access origin="https://*.kakao.com" />
+    <access origin="https://*.kakao.co.kr" />
+    <access origin="https://*.kakaocdn.net" />
+    <feature name="UniversalLinks">
+        <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>testApp</name>
+    <description>
+        A blank PhoneGap app.
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <universal-links>
+        <host name="apsh9.app.goo.gl" scheme="https" />
+        <host name="testapp-103fa.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
+</widget>

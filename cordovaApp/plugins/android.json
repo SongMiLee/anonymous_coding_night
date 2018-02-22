@@ -1,0 +1,47 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "test.test.hello.test2",
+      "ANDROID_SCHEME": " ",
+      "ANDROID_HOST": " ",
+      "ANDROID_PATHPREFIX": "/",
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-plugin-kakaotalk": {
+      "KAKAO_APP_KEY": "65d4a0041eb2fde8b3056c314d021699",
+      "PACKAGE_NAME": "test.test.hello.test2"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "test.test.hello.test2"
+    }
+  },
+  "dependent_plugins": {}
+}

@@ -84,6 +84,7 @@ img{
   width: 100%;
   padding: 5px;
   font-size: 13pt;
+  word-wrap: break-word;
 }
 
 .feed-content .feed-date{

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/songmi/Public/Ken/testApp/platforms/android/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ko/values-ko.xml",
+            "map": [
+                {
+                    "source": "/Users/songmi/.gradle/caches/transforms-1/files-1.1/util-1.1.4.aar/c606afed11bf362bf28409aa7e29080a/res/values-ko/values-ko.xml",
+                    "from": {
+                        "startLines": "4,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "202,442,498,553,624,692,763,832,895,952,1003,1075,1139",
+                        "endLines": "8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "endColumns": "19,55,54,70,67,70,68,62,56,50,71,63,54",
+                        "endOffsets": "437,493,548,619,687,758,827,890,947,998,1070,1134,1189"
+                    },
+                    "to": {
+                        "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,295,351,406,477,545,616,685,748,805,856,928,992",
+                        "endLines": "6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "endColumns": "19,55,54,70,67,70,68,62,56,50,71,63,54",
+                        "endOffsets": "290,346,401,472,540,611,680,743,800,851,923,987,1042"
+                    }
+                }
+            ]
+        }
+    ]
+}
