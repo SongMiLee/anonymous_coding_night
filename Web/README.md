@@ -4,7 +4,7 @@
 * 본 프로젝트는 MEAN 스택을 활용한 토이 프로젝트이다. Mongo DB, Express, Angular JS, Node JS를 직접적으로 활용 및 구현 해봄으로써 해당 언어들에 대해 이해하고 활용하고자 하였다.
 ## 2. 프로젝트 개발 기간
 2018.01 ~ 2018.02
-##3. 개발 사용 언어 및 도구
+## 3. 개발 사용 언어 및 도구
 Sever : Node js (Heroku)
 Client : Express, Angular js
 DB : Mongo DB (Atlas Mongo DB)
